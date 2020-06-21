@@ -1,0 +1,12 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "data": {
+      "$tenant": {
+        ".read": "root.child('metadata').child($tenant).child('publicRead').val() == true",
+        ".write": "root.child('metadata').child($tenant).child('publicWrite').val() == true"
+      }
+    }
+  }
+}
